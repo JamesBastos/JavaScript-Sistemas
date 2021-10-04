@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM (Documento Object Movel</title>
+</head>
+<body>
+    <script>
+       var u  = document.URL
+       document.write(u)
+    </script>
+    <h1>DOM JavaScript</h1> 
+    <p id="tag">TagName</p>    
+    <p id="id">ID</p>
+    <p name="name">Name</p>
+    <p class="className">ClassName</p>
+    <p id="query">querySelector</p>
+
+    <br>
+
+    <script>
+        var tag = window.document.getElementsByTagName('p')[0]
+        document.write('1 ' + tag.innerText + '<br>')
+        var id = window.document.getElementById('id')
+        document.write('2 ' + id.innerHTML + '<br>')
+        var name1 = document.getElementsByName('name')[0]
+        document.write('3 ' + name1.innerHTML + '<br>')
+        var classN = document.getElementsByClassName('className')[0]
+        document.write('4 ' + classN.innerHTML + '<br>')
+        var query = document.querySelector('#query')
+        document.write('5 ' + query.innerHTML)
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+

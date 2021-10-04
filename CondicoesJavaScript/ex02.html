@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETRAN</title>
+</head>
+<body>
+    <script>
+        var u = document.URL
+        document.write(u)
+    </script>
+        <h1>Sistema de Multas</h1>
+
+        Velocidade do Carro: <input type="number" name="vel1" id="vel1">Km/h
+        <input type="button" value="Verificar" onclick="ver()">
+        <div id="res">Resultado</div>
+
+        <script>
+            function ver(){
+                var vel = document.getElementById('vel1')
+                var km = Number(vel.value)
+                var res = document.getElementById('res')
+                
+                if (km > 60){
+                    res.innerHTML = `Você está à <b>${km}Km/h</b>, muito rápido. MULTADO`
+                }else{
+                    res.innerHTML = `Você está à <b>${km}Km/h</b>, Dirija com cuidado`
+                }
+            }
+        </script>
+
+        <h1>Nacionalide Pesquisa</h1>
+        Onde você vive? <input type="text" name="nac1" id="nac1">
+        <input type="button" value="Pesquisar" onclick="enviar()">
+        <div id=resultado2></div>
+
+        <script>
+            function enviar(){
+            var nac = document.getElementById('nac1')
+            var nac2 = String(nac.value)
+            var res2 = document.getElementById('resultado2')
+
+                if(nac2 == 'Brasil'){
+                    res2.innerHTML = `Sua nacionalidade é Brasileira`
+                }else{
+                    res2.innerHTML = `Sua nacionalidade é Estrangeira`
+                }                
+            }
+        </script>
+
+        <h1>Voto</h1>
+        Qual sua idade? <input type="number" name="vot1" id="vot1">
+        <input type="button" value="Analisar" onclick="votar()">
+        <div id="res3"></div>
+
+        <script>            
+            function votar(){
+                var idade = document.getElementById('vot1')
+                var i = Number(idade.value)
+                var res3 = document.getElementById('res3')
+
+                if( i < 16){
+                    res3.innerHTML = 'Você não vota'
+                }else if(i < 18 || i > 65){
+                    res3.innerHTML = 'Voto opcional'
+                }else{
+                    res3.innerHTML = 'Voto obrigatório'
+                }
+            }
+        </script>
+
+        <h1>Bom dia!</h1>
+        Diga Bom dia, Boa tarde ou Boa noite!<input type="text" name="bom1" id="bom1">
+        <input type="button" value="ver" onclick="oi()">
+        <div id="res4"></div>
+
+        <script>
+            var bom = document.getElementById('bom1')            
+            var res4 = document.getElementById('res4')
+            function oi(){
+                var dia = String(bom.value)
+
+                if(dia == 'Bom dia'){
+                    res4.innerHTML = 'Olá, Bom dia'
+                }else if(dia == 'Boa tarde'){
+                    res4.innerHTML = 'Olá, Boa tarde'
+                }else if(dia == 'Boa noite'){
+                    res4.innerHTML = 'Olá, Boa noite'
+                }else{
+                    res4.innerHTML = 'Não entendi, digite como no exemplo: <strong>"Bom dia", "Boa tarde" ou "Boa noite"</strong>'
+                }
+            }
+        </script>
+
+
+
+
+
+    
+</body>
+</html>

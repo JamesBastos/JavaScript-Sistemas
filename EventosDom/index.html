@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos DOM</title>
+    <style>
+        #area {
+            background: #718833; 
+            color: #fff;
+            font: normal 20pt Arial;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>    
+    <script> var u = document.URL
+    document.write(u)
+    </script>
+<br/>
+<br/>
+    <!--<div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...</div>-->
+    <div id="area">Interaja...</div>
+
+<script>    
+    var a = window.document.getElementById('area') // variavel aqui fora da problema de memoria
+    a.addEventListener('click', clicar)
+    a.addEventListener('mouseenter', entrar)
+    a.addEventListener('mouseout', sair)
+
+
+    function clicar(){
+       // var a = window.document.getElementById('area')
+        a.innerText = 'Clicou!'
+        a.style.backgroundColor = 'red'
+    }
+
+    function entrar(){
+        a.innerText = 'Olá'
+        a.style.backgroundColor = 'black'
+    }
+
+    function sair(){
+        a.innerText = 'Até logo'
+        a.style.backgroundColor = 'green'
+    }
+
+
+</script>
+
+    
+</body>
+</html>

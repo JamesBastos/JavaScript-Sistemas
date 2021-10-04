@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1 - Amanhecer, Entardecer, Anoitecer</title>
+    <link rel="stylesheet" href="css/style.css">     
+</head>
+<body>
+    <script>
+        var u = document.URL
+        document.write(u)
+    </script>
+
+    <h1>Vamos contar</h1>
+    <div class="borda">
+        <p>Início <input type="number" name="ini" id="inicio"></p>
+        <p>Fim <input type="number" name="fim" id="fim"> </p>
+        <p>Passo <input type="number" name="passo" id="passo"></p>
+        <input type="button" value="Contar" onclick="contar()">
+        <div id="res">Preparando a contagem...</div>
+    </div>
+
+    <script>
+        function contar(){
+        let ini = document.getElementById('inicio')
+        let fi = document.getElementById('fim')
+        let pas = document.getElementById('passo')
+        let res = document.getElementById('res')
+            
+            if(ini.value.length == 0 || fi.value.length == 0 || pas.value.length == 0){
+                alert('ERRO! Insira um número')
+            }else{
+                res.innerHTML = 'Contando: '
+                let i = Number(ini.value)
+                let f = Number(fi.value)
+                let p = Number(pas.value)
+
+                for(let c = i; c <= f ; c += p){
+                    
+                    res.innerHTML += `${c}`
+
+                }
+            }
+        }
+
+    </script>
+    
+    <script src="js/date.js"></script>
+    
+</body>
+</html>
