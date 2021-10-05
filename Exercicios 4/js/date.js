@@ -1,6 +1,7 @@
 function tabuada(){
     let num = document.getElementById('txtn')
     let tab = document.getElementById('txttab')
+    
     if( num.value.length == 0){
         alert('Erro! Digite um número')
     }else{
