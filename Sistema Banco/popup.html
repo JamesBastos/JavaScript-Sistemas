@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cadastros</title>
+</head>
+<body>
+
+    <h1>Abrir sua conta nunca foi tão fácil</h1>
+        <div class="cadastroLayout">
+            <p>
+                Digite seu nome: <input type="text" name="inputN" id="inputLogin">
+            </p>
+            <p>
+                Escolha uma senha: <input type="password" name="nameSenha" id="inputSenha">
+            </p>
+            
+            <p class="">
+                Marque o tipo da conta que quer abrir: <input type="radio" name="inputTipoConta" id="inputCP" > Conta Poupança
+                                <input type="radio" name="inputTipoConta" id="inputCC"> Conta Corrente
+            </p>
+            
+            <p>                
+                <input type="button" value="Abrir conta agora!" onclick="abrirConta()">
+            </p>
+
+            <div id="infoConta"></div>
+            
+
+        </div>
+
+        <script src="js/abrirConta.js"></script>
+</body>
+</html>

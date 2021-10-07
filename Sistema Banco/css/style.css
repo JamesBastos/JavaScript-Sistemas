@@ -1,0 +1,40 @@
+body {
+    background-color: rgb(51, 168, 214);
+    margin: 20px;
+    padding: 0;
+}
+h1{
+    color: #fff;
+    text-align: center;
+}
+.borda{
+    width: 100%;
+    height: 400px;
+    background-color: #fff;
+    margin: auto;
+    border-radius: 15px;
+}
+.borda img{
+    width: 100%;
+    height: 100%;
+}
+h2{
+    text-align: center;
+    padding-top: 30px;
+}
+.palitos{
+    margin-top: 50px;
+}
+.cadastroLayout{
+    color: rgb(48, 48, 48);
+    font-weight: bold;
+    font-size: 14pt;
+    margin-top: 50px;
+}
+.nomeCliente{
+    color: #fff;
+}
+
+.saldoCliente{
+    color: #fff;
+}
